@@ -1,0 +1,194 @@
+commands:
+  reload: '&7Konfigurace se znovu načetla !'
+gui:
+  custom category list:
+    title: '&eHlavy &8> &7Další kategorie'
+    items:
+      new:
+        lore:
+          - ''
+          - '&e&lKlikni &8» &7Vytváření nový kategorii'
+        name: <GRADIENT:DD5E89>&lNový Kategorie</GRADIENT:fbc7d4>
+      category:
+        lore:
+          - '&8Zobrazit hlavy v této kategorii'
+          - '&7Celkový počet hlav&F: &b%category_size%'
+          - ''
+          - '&e&lKlikni &8» &7Zobrazení kategorii'
+        name: '%category_name%'
+  skulls list:
+    title:
+      all: '&eHlavy &8> &7Všechny'
+      search: '&eHlavy &8> &7%search_phrase%'
+      favourites: '&eHlavy &8> &7Oblíbené'
+      category: '&eHlavy &8> &7%category_name%'
+    items:
+      skull:
+        lore:
+          take: '&e&lKlikni &8» &7Chcete-li si vzít jeden'
+          blocked: '&c&oNákup je blokován'
+          favourited: '&e&lOBLÍBENÉ'
+          edit: '&b&lStiskněte tlačítko 1 &8 » &7Chcete-li tuto hlavu upravit.'
+          price: '&7Cena: &a$%skull_price%'
+          un favourite: '&e&lKliknutí pravým tlačítkem myši &8» &7Zrušení oblíbené
+            hlavy'
+          id: '&7Id: &e%skull_id%'
+          favourite: '&e&lKliknutí pravým tlačítkem myši &8» &7Přidání oblíbené hlavy.'
+          tags: '&7Tags: &e%skull_tags%'
+        name: '&e%skull_name%'
+  player heads:
+    title: '&eHlavy &8> &7Hlavy Hráčů'
+    items:
+      head:
+        name: '&eHlavy Hráčů'
+  shared buttons:
+    next button:
+      lore: '&7Kliknutím na další stránku'
+      name: '&eDalší'
+    exit button:
+      lore: '&7Kliknutím zavřete nabídku'
+      name: '&cZavřít'
+    previous button:
+      lore: '&7Kliknutím se vrátíte o stránku zpět'
+      name: '&ePředchozí'
+    back button:
+      lore: '&7Kliknutím se vrátíte zpět'
+      name: '&aZpět'
+  edit:
+    title: '&eSkulls &8> &7Edit &8> &7%skull_id%'
+    items:
+      blocked:
+        lore:
+          - ''
+          - '&7Blocked&f: %is_true%'
+          - ''
+          - '&e&lClick &8» &7To toggle block status'
+        name: <GRADIENT:DD5E89>&lSkull Blocked</GRADIENT:fbc7d4>
+      price:
+        lore:
+          - ''
+          - '&e&lClick &8» &7To edit skull price'
+        name: <GRADIENT:DD5E89>&lSkull Price</GRADIENT:fbc7d4>
+      name:
+        lore:
+          - ''
+          - '&e&lClick &8» &7To change skull name'
+        name: <GRADIENT:DD5E89>&lSkull Name</GRADIENT:fbc7d4>
+      add category:
+        lore:
+          - ''
+          - '&e&lClick &8» &7To add to another category'
+        name: <GRADIENT:DD5E89>&lAdd To Category</GRADIENT:fbc7d4>
+  histories:
+    title: '&eHlavy &8> &7Historie'
+    items:
+      history:
+        lore:
+          - ''
+          - '&7Total Heads&f: &a%history_size%'
+          - '&7Downloaded&f: %is_true%'
+          - '&7Time&f: &a%history_time%'
+          - ''
+          - '&e&lClick &8» &7To download heads'
+        name: '&e%history_id%'
+  main:
+    title: '&eHlavy'
+    items:
+      search:
+        lore:
+          - ''
+          - '&e&lKlikni &8» &7Vyhledání hlavy'
+        name: <GRADIENT:DD5E89>&lVyhledávač</GRADIENT:fbc7d4>
+      favourites:
+        lore:
+          - '&7Sbírka všech hlav,'
+          - '&7které jste si oblíbili.'
+          - ''
+          - '&e&lKlikni &8» &7Zobrazení oblíbených položek'
+        name: <GRADIENT:DD5E89>&lOblíbené</GRADIENT:fbc7d4>
+      custom categories:
+        lore:
+          - ''
+          - '&e&lKlikni &8» &7Zobrazení dalších kategorií'
+        name: <GRADIENT:DD5E89>&lDalší kategorie    </GRADIENT:fbc7d4>
+      category:
+        lore:
+          - '&8Zobrazit hlavy této kategorie'
+          - '&7Celkový počet hlav&F: &b%category_size%'
+          - ''
+          - '&e&lKlikni &8» &7Zobrazení kategorie'
+        name: '&e%category_name%'
+      players:
+        lore:
+          - '&8Zobrazit hlavy hráčů'
+          - '&7Celkový počet hlav&F: &b%category_size%'
+          - ''
+          - '&e&lKlikni &8» &7Zobrazení hlavy hráčů'
+        name: '&eHlavy Hráčů'
+  custom category selector:
+    title: '&eHlavy&8> &7Zvolit kategorii'
+    items:
+      category:
+        lore: '&e&lKlikni &8» &7Výběr kategorie'
+        name: '%category_name%'
+input:
+  category create:
+    subtitle: '&fEnter id for new category'
+    title: '&eCategory Creation'
+  skull edit:
+    price: '&fEnter the new skull price'
+    name: '&FEnter the new name skull name'
+    title: '&eEditing Skull'
+  skull search:
+    subtitle: '&fZadejte do chatu vyhledávací výrazy'
+    title: '&eVyhledávání hlav'
+categories:
+  food and drinks: Jídlo & Pití
+  humanoids: Humanoidi
+  plants: Rostliny
+  blocks: Bloky
+  monsters: Příšery
+  alphabet: Abeceda
+  animals: Zvířata
+  decoration: Dekorace
+  humans: Lidé
+  misc: Různé
+error:
+  not a number: '&4%value% &cnení platné číslo!'
+  no permission: '&cNemáte dostatečné oprávnění!'
+  player offline: '&4%value% &cnení momentálně online!'
+  not enough money: '&cNemáte dost peněz!'
+  player not found: '&4%value% &cnebyl nalezen!'
+button:
+  number key: 'Press # Key'
+  left click: Left Click
+  right click: Right Click
+  left shift click: Shift+Left Click
+  middle click: Middle Click
+  drop key: Press Drop Key
+misc:
+  id taken: '&cThat category id is already in use!'
+  skull not found: '&cNo skull by that id could be found'
+  no skull info: '&cCould not determine ID of that skull'
+  category permission: '&cYou do not have permission to access that category!'
+  loading: '&cPlease wait a bit longer, still loading heads.'
+conditionals:
+  is true: '&ATrue'
+  is allowed: '&aAllowed'
+  is false: '&cFalse'
+  'false': '&CFalse'
+  is disallowed: '&cDisallowed'
+  'true': '&aTrue'
+  closed: '&cClosed'
+  disabled: '&cDisabled'
+  enabled: '&aEnabled'
+  open: '&aOpen'
+skull:
+  name: '&e%skull_name%'
+inspect info:
+  - '&8&m-----------------------------------------------------'
+  - ''
+  - '&eSkull ID&f: &a%skull_id%'
+  - '&eTexture URL&f: &a%skull_texture%'
+  - ''
+  - '&8&m-----------------------------------------------------'

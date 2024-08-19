@@ -19,16 +19,19 @@
 package ca.tweetzy.skulls.settings;
 
 import ca.tweetzy.flight.settings.TranslationEntry;
-import ca.tweetzy.flight.settings.TranslationManager;
 import ca.tweetzy.skulls.Skulls;
 import lombok.NonNull;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Translations extends TranslationManager {
+import java.util.Objects;
 
-	public Translations(@NonNull JavaPlugin plugin) {
-		super(plugin);
-	}
+public final class Translations extends TranslationManagerExtender {
+
+    public Translations(@NonNull JavaPlugin plugin, @NonNull String locale) {
+		super(plugin, locale);
+    }
+
+	public static final TranslationEntry COMMAND_RELOAD = create("commands.reload", "&7Configuration is successfully reloaded !");
 
 	public static final TranslationEntry MISC_IS_TRUE = create("conditionals.is true", "&ATrue");
 	public static final TranslationEntry MISC_IS_FALSE = create("conditionals.is false", "&cFalse");
@@ -218,6 +221,6 @@ public final class Translations extends TranslationManager {
 
 
 	public static void init() {
-		new Translations(Skulls.getInstance()).setup();
+		new Translations(Skulls.getInstance(), Objects.requireNonNull(Settings.LANG.getString())).setup();
 	}
 }

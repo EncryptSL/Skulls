@@ -60,8 +60,7 @@ public final class Skulls extends FlightPlugin {
 
 	private final SkullsAPI api = new SkullsAPIImplementation();
 
-	private DatabaseConnector databaseConnector;
-	private DataManager dataManager;
+    private DataManager dataManager;
 
 	@Override
 	protected void onFlight() {
@@ -73,10 +72,10 @@ public final class Skulls extends FlightPlugin {
 		Common.setPluginName("<GRADIENT:DD5E89>&lSkulls</GRADIENT:fbc7d4>");
 
 		// setup sqlite
-		this.databaseConnector = new SQLiteConnector(this);
-		this.dataManager = new DataManager(this.databaseConnector, this);
+        DatabaseConnector databaseConnector = new SQLiteConnector(this);
+		this.dataManager = new DataManager(databaseConnector, this);
 
-		final DataMigrationManager dataMigrationManager = new DataMigrationManager(this.databaseConnector, this.dataManager,
+		final DataMigrationManager dataMigrationManager = new DataMigrationManager(databaseConnector, this.dataManager,
 				new _1_InitialMigration(),
 				new _2_PlacedSkullsMigration(),
 				new _3_HistoryRemovalMigration()
@@ -97,6 +96,7 @@ public final class Skulls extends FlightPlugin {
 		this.commandManager.registerCommandDynamically(new SkullsCommand()).addSubCommands(
 				new SearchCommand(),
 				new PlayerHeadCommand(),
+				new ReloadCommand(),
 				new GiveCommand(),
 				new InspectCommand()
 		);

@@ -130,38 +130,32 @@ public final class MainGUI extends SkullsBaseGUI {
 
 		if (this.player.hasPermission("skulls.admin") || this.player.isOp()) {
 			setButton(5, 0, QuickItem.of(CompMaterial.REPEATER)
-					.name("&e&lSettings")
+					.name("&e&lNastavení")
 					.lore(
-							"&8Skull Settings",
-							"&7A few quick setting options for skulls",
+							"&8Nastavení hlav",
+							"&7Několik rychlích možností nastavení hlav",
 							"",
-							"&e&lClick &8» &7To view settings"
+							"&e&lKliknutím &8» &7Zobrazíš nastavení"
 					)
 					.make(), click -> click.manager.showGUI(click.player, new SettingsGUI(this, click.player)));
 
-			setButton(5, 8, QuickItem.of(CompMaterial.DIAMOND)
-					.name("&e&lPatreon")
+			setButton(5, 8, QuickItem.of(CompMaterial.EMERALD)
+					.name("&e&lFork of Skulls by EncryptSL")
 					.lore(
-							"&8Support me on Patreon",
-							"&7By supporting me on Patreon you will",
-							"&7be helping me be able to continue updating",
-							"&7and creating free plugins.",
+							"&8Plugin přeložil",
+							"&a&lkorspeed_cz",
 							"",
-							"&8&oDon't worry, normal players can't see this",
-							"",
-							"&e&lClick &8» &7To view Patreon"
-					)
-					.glow(true)
-					.make(), click -> {
+							"&7Klikni pro zobrazení twitche."
+					).glow(true).make(), click -> {
 
-				click.gui.close();
-				Common.tellNoPrefix(click.player,
-						"&8&m-----------------------------------------------------",
-						"",
-						ChatUtil.centerMessage("&E&lTweetzy Patreon"),
-						ChatUtil.centerMessage("&bhttps://patreon.com/kiranhart"),
-						"&8&m-----------------------------------------------------"
-				);
+					click.gui.close();
+					Common.tellNoPrefix(click.player,
+							"&8&m-----------------------------------------------------",
+							"",
+							ChatUtil.centerMessage("&E&lKorspeed Twitch"),
+							ChatUtil.centerMessage("&bhttps://www.twitch.tv/korspeeddash"),
+							"&8&m-----------------------------------------------------"
+					);
 			});
 		}
 	}

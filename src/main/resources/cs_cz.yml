@@ -167,11 +167,12 @@ button:
   middle click: Middle Click
   drop key: Press Drop Key
 misc:
-  id taken: '&cThat category id is already in use!'
-  skull not found: '&cNo skull by that id could be found'
+  id taken: '&cToto id kategorie se již používa!'
+  skull not found: '&cHlava s tímto id nebyla nalezena'
   no skull info: '&cCould not determine ID of that skull'
-  category permission: '&cYou do not have permission to access that category!'
-  loading: '&cPlease wait a bit longer, still loading heads.'
+  category permission: '&cNemáš dostatečná oprávnění pro přístup do této kategorie!'
+  loading: '&cProsím počkej, hlavy se načítají.'
+  claim delay: '&cDalší hlavu si můžeš vzít za &7(&e%time_difference%&7)'
 conditionals:
   is true: '&ATrue'
   is allowed: '&aAllowed'
